@@ -1,0 +1,19 @@
+<script>
+    //Exemplo 1
+
+//Início
+    const quantidadeNotas = Number(prompt(`Informe a quantidade de notas que você obteve:`));
+    let soma = 0
+
+//Meio
+    for(let quantNotas = 1; quantNotas<=quantidadeNotas; quantNotas++){
+        const notas = Number(prompt(`Informe a ${quantNotas} nota:`).replace(",", "."))
+        //soma = soma + notas;
+        soma += notas
+    }
+    const resultado = soma/quantidadeNotas;
+    
+
+//Fim
+document.write(`A média que você obteve foi: ${resultado.toFixed(2).replace(".", ",")}.`)
+</script>
