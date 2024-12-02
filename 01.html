@@ -1,19 +1,39 @@
+<meta charset="UTF-8">
 <script>
-    //Exemplo 1
+    /*
+    PROBLEMA: LETRAS REPETIDAS
+    Considere a lista de letras abaixo:
+    let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
+    Faça um programa que identifique as letras repetidas que estão contidas na lista e apresente cada letra apenas uma única vez, e em ordem alfabética.
+    *Letras maiúsculas e minúsculas são a mesma letra e não podem ser repetidas!
+    **Apresente apenas letras minúsculas!
+    */
 
-//Início
-    const quantidadeNotas = Number(prompt(`Informe a quantidade de notas que você obteve:`));
-    let soma = 0
+    //ENTRADA
+    let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
+    let listaCorreta = [];
+    let listaComRepeticao = [];
 
-//Meio
-    for(let quantNotas = 1; quantNotas<=quantidadeNotas; quantNotas++){
-        const notas = Number(prompt(`Informe a ${quantNotas} nota:`).replace(",", "."))
-        //soma = soma + notas;
-        soma += notas
+    //PROCESSAMENTO
+
+    for(let letras = 0; letras<listaDeLetras.length; letras++){
+        let resultado = listaDeLetras[letras].toLowerCase()
+        if(listaDeLetras[letras] === resultado){
+            listaComRepeticao.push(listaDeLetras[letras])
+        }
     }
-    const resultado = soma/quantidadeNotas;
-    
+    listaCorreta.concat(listaComRepeticao)
+    for (let i = 0; i < listaComRepeticao.length; i++){
+        if(listaCorreta.indexOf("e")>=0){
+            listaCorreta.slice("e");
+        }
 
-//Fim
-document.write(`A média que você obteve foi: ${resultado.toFixed(2).replace(".", ",")}.`)
+    }
+    
+    document.write(listaCorreta)
+
+    //Não terminei
+    
+    //SAÍDA
+
 </script>
