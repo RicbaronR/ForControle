@@ -4,15 +4,40 @@
     PROBLEMA: REPRESENTANTE DE SALA
     Peça para o programa perguntar ao professor regente o nome dos três candidatos a representante da sala.
     Peça também para o programa perguntar ao professor regente a quantidade de alunos votantes.
-    Desenvolva um programa que armazene o voto de cada aluno da sala e apresente o resultado da votação, com o quantitativo de votos e também a porcentagem de votos de cada candidato a representante de sala.
+    Desenvolva um programa que armazene o voto de cada aluno da sala e apresente o resultado da votação, com o quantitativo de votos e também a porcentagem de votos de cada candidato 
+    a representante de sala.
     */
 
     //ENTRADA
+    const quantVotos = Number(prompt(`Informe a quantidade de alunos que votaram:`));
+    const representante1 = prompt(`Informe o nome do primeiro candidato a representante de sala:`);
+    const representante2 = prompt(`Informe o nome do segundo candidato a representante de sala:`);
+    const representante3 = prompt(`Informe o nome do terceiro candidato a representante de sala:`);
 
-
+    let vtsDo1 = 0;
+    let vtsDo2 = 0;
+    let vtsDo3 = 0;
     //PROCESSAMENTO
-
+    for (let i = 1; i<=quantVotos; i++){
+        const voto = prompt(`Informe o ${i}º voto:`).toLowerCase().trim();
+        if(voto === representante1.toLowerCase().trim()){
+            vtsDo1++
+        } else if(voto === representante2.toLowerCase().trim()){
+            vtsDo2++
+        } else if(voto === representante3.toLowerCase().trim()){
+            vtsDo3++
+        } else{
+            alert(`os votos devem ser destinados a um dos três representantes informados no início!`);
+        }
+        }
+        const porcenVt1 = (vtsDo1/quantVotos)*100;
+        const porcenVt2 = (vtsDo2/quantVotos)*100;
+        const porcenVt3 = (vtsDo3/quantVotos)*100;
 
     //SAÍDA
+    document.write(`Votação (${quantVotos} pessoas = 100%):<br>
+    Candidato ${representante1}: ficou com ${vtsDo1} votos, ou seja ${porcenVt1}% dos votos totais.<br>
+    Candidato ${representante2}: ficou com ${vtsDo2} votos, ou seja ${porcenVt2}% dos votos totais.<br>
+    Candidato ${representante3}: ficou com ${vtsDo3} votos, ou seja ${porcenVt3}% dos votos totais.`)
 
 </script>

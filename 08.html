@@ -6,11 +6,17 @@
     */
 
     //ENTRADA
-
-
+    let listaNumeros = []
+    let soma = 0;
     //PROCESSAMENTO
-
+    for(let numero = 1; numero<=5; numero++){
+        const numeros = Number(prompt(`Informe o ${numero}º número:`));
+        listaNumeros.push(numeros)
+        soma += listaNumeros[numero-1];
+    }
+    let media = soma/(listaNumeros.length);
 
     //SAÍDA
+    document.write(`A soma das notas é ${soma.toFixed(1).replace(".", ",")}. A média dos números é ${media.toFixed(1).replace(".", ",")}.`);
 
 </script>
