@@ -5,11 +5,20 @@
     */
 
     //ENTRADA
-
+    let invesInicial = 1000;
+    let invesFinal = 2000;
+    let soma = 1000;
+    let diasTotais = 0
+    
 
     //PROCESSAMENTO
-
+    for(let dias = 0; invesInicial<=invesFinal; dias++){
+        invesInicial += invesFinal*0.02;
+        diasTotais = dias;
+    }
+    let diasUteis = Math.ceil(((diasTotais/5)*2)+diasTotais);
 
     //SAÍDA
+    document.write(`Serão necessários ${diasUteis} dias úteis para que Joãozinho consiga o total de R$ 2.000,00.`)
 
 </script>

@@ -5,11 +5,15 @@
     */
 
     //ENTRADA
-
+    let multiplos3 = [];
 
     //PROCESSAMENTO
-
+    for(let multiplos = 1; multiplos<=100; multiplos++){
+        if(multiplos%3 === 0 ){
+            multiplos3.push(multiplos);
+        }
+    }
 
     //SAÍDA
-
+    document.write(`Lista dos números múltiplos de 3: ${multiplos3.join(", ")}.`)
 </script>

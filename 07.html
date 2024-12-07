@@ -9,21 +9,19 @@
     //ENTRADA
     let populacao = 80000; 
     let populacaoFinal = 200000;  
+    let soma = 80000;
     let years = 0;
-    let soma
 
     
     //PROCESSAMENTO
-    for(let anos = 1; populacao<=populacaoFinal; anos++){
-        soma += populacao * 0.03
-        populacao = populacao+soma
-        years += anos
+    for(let anos = 0; populacao<=populacaoFinal; anos++){
+        populacao += soma * 0.03
+        years = anos
     }
 
     document.write(`Serão necessários ${years} anos para que o número de habitantes atinja 200 mil.`)
 
     
     //SAÍDA
-    //Não terminei
 
 </script>
