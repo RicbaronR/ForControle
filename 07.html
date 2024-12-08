@@ -15,13 +15,11 @@
     
     //PROCESSAMENTO
     for(let anos = 0; populacao<=populacaoFinal; anos++){
-        populacao += soma * 0.03
-        years = anos
+        populacao *= 1.03
+        years++
     }
 
-    document.write(`Serão necessários ${years} anos para que o número de habitantes atinja 200 mil.`)
-
-    
     //SAÍDA
+    document.write(`Serão necessários ${years} anos para que o número de habitantes atinja 200 mil.`);
 
 </script>

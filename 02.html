@@ -12,14 +12,14 @@
 
     //PROCESSAMENTO
     let somaNotas = 0;
-    for(let notas = 1; notas<quantNotas; notas++){
-        const notasObtidas = Number(prompt(`Informe a ${notas}ª nota do aluno:`));
+    for(let notas = 0; notas<quantNotas; notas++){
+        const notasObtidas = Number(prompt(`Informe a ${notas+1}ª nota do aluno:`));
         somaNotas = notasObtidas+somaNotas;
     }
     const mediaAluno = somaNotas/quantNotas;
 
 
     //SAÍDA
-    document.write(`A média do aluno é ${mediaAluno.toFixed(1).replace(".", ",")}.`)
+    document.write(`A média do aluno é ${mediaAluno.toFixed(1).replace(".", ",")}.`);
 
 </script>
