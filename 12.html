@@ -12,8 +12,8 @@
     
 
     //PROCESSAMENTO
-    for(let dias = 0; invesInicial<=invesFinal; dias++){
-        invesInicial += invesFinal*0.02;
+    for(let dias = 1; invesInicial<=invesFinal; dias++){
+        invesInicial = invesInicial*1.02;
         diasTotais = dias;
     }
     let diasUteis = Math.ceil(((diasTotais/5)*2)+diasTotais);

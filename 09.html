@@ -9,24 +9,23 @@
 
     //ENTRADA
     let populacao = 50000;
-    let prazo5 = 0;
-    let prazo10 = 0;
-    let populacaoAtualizada = 0;
+    let populacao5 = 0;
+    let populacao10 = 0;
     
     //PROCESSAMENTO
     for(let anos = 1; anos<=10; anos++){
-        populacaoAtualizada += populacao * 0.015;
+        populacao += populacao * 0.015;
         if(anos === 5){
-            prazo5 = populacaoAtualizada+50000;
+            populacao5 = populacao;
         }
         if(anos === 10){
-            prazo10 = populacaoAtualizada+50000;
+            populacao10 = populacao;
         }
     }
 
     //SAÍDA
     document.write(`A população prevista para um prazo 
-    de 5 anos é de ${prazo5} habitantes<br>
-    Já a população prevista para um prazo de 10 anos é de ${prazo10} habitantes.`);
+    de 5 anos é de ${populacao5.toFixed(0)} habitantes<br>
+    Já a população prevista para um prazo de 10 anos é de ${populacao10.toFixed(0)} habitantes.`);
 
 </script>

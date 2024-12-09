@@ -14,13 +14,13 @@
     for(let numero = 1; numero<=numInformado; numero++){
         if(numInformado%numero === 0){
             listaNumero.push(numero);
-            if(listaNumero.length>2){
+        }
+    }
+    if(listaNumero.length>2){
                 mensagem = `O número ${numInformado} não é primo.`;
             } else{
                 mensagem = `O número ${numInformado} é primo.`;
             }
-        }
-    }
     //SAÍDA
     document.write(mensagem);
 
